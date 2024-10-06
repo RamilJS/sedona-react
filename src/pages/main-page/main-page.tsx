@@ -1,5 +1,5 @@
 
-function Main():JSX.Element {
+function MainPage():JSX.Element {
     return (
         <div className="body-container">
             <header className="page-header" data-test="header">
@@ -329,4 +329,4 @@ function Main():JSX.Element {
     );
 }
 
-export default Main;
+export default MainPage;
