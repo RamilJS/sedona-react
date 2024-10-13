@@ -1,25 +1,30 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 // import browserHistory from '../../browser-history';
 import MainPage from '../../pages/main-page/main-page';
 import Catalog from '../../pages/catalog/catalog';
-import './app.css';
+import NotFoundScreen from '../../pages/not-found/not-found-screen';
 
 
 function App(): JSX.Element {
 
   return (
-        <Routes>
+    <BrowserRouter>
+      <Routes>
           <Route
             path="/"
             element={<MainPage />} 
           />
           <Route
-            path="/"
+            path="/catalog"
             element={<Catalog />} 
           />
+          <Route
+            path="/*"
+            element={<NotFoundScreen />} 
+          />
         </Routes>
-
+    </BrowserRouter>
   )
 };
 

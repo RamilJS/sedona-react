@@ -1,30 +1,32 @@
+import { Link
 
+ } from "react-router-dom";
 function Catalog():JSX.Element {
     return (
     <div className="body-container">
     <header className="page-header" data-test="header">
         <nav className="navigation">
-        <a href="#" className="logo-link" aria-current="page">
+        <Link to="/" className="logo-link" aria-current="page">
             <img src="images/logo.svg" alt="Логотип Седона" />
-        </a>
+        </Link>
         <ul className="navigation-list main-navigation-list">
             <li className="navigation-list-item">
-            <a className="navigation-link" href="index.html" aria-current="page">
+            <Link className="navigation-link" to="/" aria-current="page">
                 Главная
-            </a>
+            </Link>
             </li>
             <li className="navigation-list-item">
-            <a className="navigation-link" href="#">
+            <Link className="navigation-link" to="#">
                 О Седоне
-            </a>
+            </Link>
             </li>
             <li className="navigation-list-item current-item">
-            <a
+            <Link
                 className="navigation-link navigation-link-current"
-                href="catalog.html"
+                to="catalog"
             >
                 Гостиницы
-            </a>
+            </Link>
             </li>
         </ul>
         <ul className="navigation-list navigation-user">
@@ -45,7 +47,7 @@ function Catalog():JSX.Element {
             </a>
             </li>
             <li className="navigation-list-item">
-            <a className="navigation-link navigation-user-link" href="#">
+            <Link className="navigation-link navigation-user-link" to="#">
                 <span className="favorites visually-hidden">Избранное</span>
                 <svg
                 className="favorites-icon"
@@ -59,12 +61,12 @@ function Catalog():JSX.Element {
                 <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" />
                 </svg>
                 <span className="favorites-count">12</span>
-            </a>
+            </Link>
             </li>
             <li className="navigation-list-item">
-            <a href="#" className="button navigation-button navigation-user-link">
+            <Link to="#" className="button navigation-button navigation-user-link">
                 Хочу сюда!
-            </a>
+            </Link>
             </li>
         </ul>
         </nav>
@@ -77,7 +79,7 @@ function Catalog():JSX.Element {
             <h2 className="inner-header-title">Гостиницы Седоны</h2>
             <ul className="breadcrumbs-list">
                 <li className="breadcrumbs-list-item">
-                <a className="breadcrumbs-link main-page-link" href="index.html">
+                <Link className="breadcrumbs-link main-page-link" to="/">
                     <svg
                     className="breadcrumbs-house-icon"
                     aria-hidden="true"
@@ -98,10 +100,10 @@ function Catalog():JSX.Element {
                     />
                     </svg>
                     <span className="visually-hidden">Главная</span>
-                </a>
+                </Link>
                 </li>
                 <li className="breadcrumbs-list-item">
-                <a className="breadcrumbs-link">Гостиницы</a>
+                <Link to="#" className="breadcrumbs-link">Гостиницы</Link>
                 </li>
             </ul>
             </header>
@@ -260,22 +262,22 @@ function Catalog():JSX.Element {
             </select>
             <ul className="cards-view-list">
                 <li className="cards-view-item">
-                <a
-                    href="catalog.html?view=card"
+                <Link
+                    to="catalog.html?view=card"
                     className="button current-button"
                 >
                     <span className="visually-hidden">Показать карточки</span>
-                </a>
+                </Link>
                 </li>
                 <li className="cards-view-item">
-                <a href="catalog.html?view=tile" className="button">
+                <Link to="catalog.html?view=tile" className="button">
                     <span className="visually-hidden">Показать мозаикой</span>
-                </a>
+                </Link>
                 </li>
                 <li className="cards-view-item">
-                <a href="catalog.html?view=list" className="button">
+                <Link to="catalog.html?view=list" className="button">
                     <span className="visually-hidden">Показать список</span>
-                </a>
+                </Link>
                 </li>
             </ul>
             </div>
@@ -284,7 +286,7 @@ function Catalog():JSX.Element {
             <h2 className="cards-title visually-hidden">Список карточек</h2>
             <ul className="cards-list">
             <li className="cards-list-item">
-                <a className="card-link" href="#">
+                <Link className="card-link" to="#">
                 <img
                     className="card-image"
                     src="images/hotel-1.jpg"
@@ -293,19 +295,19 @@ function Catalog():JSX.Element {
                     alt="Вид из пещеры на небо"
                 />
                 <h3 className="card-title">Amara Resort &amp; Spa</h3>
-                </a>
+                </Link>
                 <div className="card-wrapper">
                 <p className="conditions">
                     <span className="house-type">Гостиница</span>
                     <span className="house-price">От 4000 ₽</span>
                 </p>
                 <p className="card-buttons">
-                    <a href="#" className="card-button details">
+                    <Link to="#" className="card-button details">
                     ПОДРОБНЕЕ
-                    </a>
-                    <a href="#" className="card-button favotites">
+                    </Link>
+                    <Link to="#" className="card-button favotites">
                     В ИЗБРАННОЕ
-                    </a>
+                    </Link>
                 </p>
                 <div className="card-rating">
                     <ul className="star-rating-list">
@@ -322,7 +324,7 @@ function Catalog():JSX.Element {
                 </div>
             </li>
             <li className="cards-list-item">
-                <a className="card-link" href="#">
+                <Link className="card-link" to="#">
                 <img
                     className="card-image"
                     src="images/hotel-2.jpg"
@@ -331,19 +333,19 @@ function Catalog():JSX.Element {
                     alt="Вид из пещеры на небо"
                 />
                 <h3 className="card-title">Villas at Poco Diablo</h3>
-                </a>
+                </Link>
                 <div className="card-wrapper">
                 <p className="conditions">
                     <span className="house-type">Гостиница</span>
                     <span className="house-price">От 5000 ₽</span>
                 </p>
                 <p className="card-buttons">
-                    <a href="#" className="card-button details">
+                    <Link to="#" className="card-button details">
                     ПОДРОБНЕЕ
-                    </a>
-                    <a href="#" className="card-button favotites-selected">
+                    </Link>
+                    <Link to="#" className="card-button favotites-selected">
                     В ИЗБРАННОМ
-                    </a>
+                    </Link>
                 </p>
                 <div className="card-rating">
                     <ul className="star-rating-list">
@@ -360,7 +362,7 @@ function Catalog():JSX.Element {
                 </div>
             </li>
             <li className="cards-list-item">
-                <a className="card-link" href="#">
+                <Link className="card-link" to="#">
                 <img
                     className="card-image"
                     src="images/hotel-3.jpg"
@@ -369,19 +371,19 @@ function Catalog():JSX.Element {
                     alt="Горы на фоне чистого неба"
                 />
                 <h3 className="card-title">Desert Quail Inn</h3>
-                </a>
+                </Link>
                 <div className="card-wrapper">
                 <p className="conditions">
                     <span className="house-type">Гостиница</span>
                     <span className="house-price">От 2500 ₽</span>
                 </p>
                 <p className="card-buttons">
-                    <a href="#" className="card-button details">
+                    <Link to="#" className="card-button details">
                     ПОДРОБНЕЕ
-                    </a>
-                    <a href="#" className="card-button favotites">
+                    </Link>
+                    <Link to="#" className="card-button favotites">
                     В ИЗБРАННОЕ
-                    </a>
+                    </Link>
                 </p>
                 <div className="card-rating">
                     <ul className="star-rating-list">
@@ -397,7 +399,7 @@ function Catalog():JSX.Element {
                 </div>
             </li>
             <li className="cards-list-item">
-                <a className="card-link" href="#">
+                <Link className="card-link" to="#">
                 <img
                     className="card-image"
                     src="images/hotel-4.jpg"
@@ -406,19 +408,19 @@ function Catalog():JSX.Element {
                     alt="Горы на фоне звездного неба"
                 />
                 <h3 className="card-title">GreenTree Inn</h3>
-                </a>
+                </Link>
                 <div className="card-wrapper">
                 <p className="conditions">
                     <span className="house-type">Гостиница</span>
                     <span className="house-price">От 1500 ₽</span>
                 </p>
                 <p className="card-buttons">
-                    <a href="#" className="card-button details">
+                    <Link to="#" className="card-button details">
                     ПОДРОБНЕЕ
-                    </a>
-                    <a href="#" className="card-button favotites">
+                    </Link>
+                    <Link to="#" className="card-button favotites">
                     В ИЗБРАННОЕ
-                    </a>
+                    </Link>
                 </p>
                 <div className="card-rating">
                     <ul className="star-rating-list">
@@ -436,32 +438,32 @@ function Catalog():JSX.Element {
             <div className="pagination-container">
             <ul className="pagination-list">
                 <li className="pagination-item pagination-current">
-                <a className="pagination-link" href="#">
+                <Link className="pagination-link" to="#">
                     1
-                </a>
+                </Link>
                 </li>
                 <li className="pagination-item">
-                <a className="pagination-link" href="#">
+                <Link className="pagination-link" to="#">
                     2
-                </a>
+                </Link>
                 </li>
                 <li className="pagination-item">
-                <a className="pagination-link" href="#">
+                <Link className="pagination-link" to="#">
                     3
-                </a>
+                </Link>
                 </li>
                 <li className="pagination-item">
-                <a className="pagination-link" href="#">
+                <Link className="pagination-link" to="#">
                     4
-                </a>
+                </Link>
                 </li>
                 <li className="pagination-item pagination-others">
                 <span>...</span>
                 </li>
                 <li className="pagination-item">
-                <a className="pagination-link" href="#">
+                <Link className="pagination-link" to="#">
                     10
-                </a>
+                </Link>
                 </li>
             </ul>
             </div>
@@ -518,9 +520,9 @@ function Catalog():JSX.Element {
             </a>
             </li>
             <li className="footer-social-list-item">
-            <a
+            <Link
                 className="button button-social social-icon-tg"
-                href="https://t.me/htmlacademy"
+                to="https://t.me"
             >
                 <svg
                 className="social-icon"
@@ -534,12 +536,12 @@ function Catalog():JSX.Element {
                 <path d="M16.785 0.955705L0.840489 7.1042C-0.247661 7.54126 -0.241365 8.14828 0.640845 8.41897L4.73445 9.69597L14.2058 3.72014C14.6537 3.44766 15.0629 3.59424 14.7265 3.89281L7.05283 10.8183H7.05103L7.05283 10.8192L6.77045 15.0387C7.18413 15.0387 7.36669 14.8489 7.59871 14.625L9.58705 12.6915L13.7229 15.7464C14.4855 16.1664 15.0332 15.9506 15.2229 15.0405L17.9379 2.2453C18.2158 1.13107 17.5126 0.626562 16.785 0.955705Z" />
                 </svg>
                 <span className="visually-hidden">Telegram</span>
-            </a>
+            </Link>
             </li>
             <li className="footer-social-list-item">
-            <a
+            <Link
                 className="button button-social social-icon-youtube"
-                href="https://www.youtube.com/user/htmlacademyru"
+                to="https://www.youtube.com"
             >
                 <svg
                 className="social-icon"
@@ -553,36 +555,12 @@ function Catalog():JSX.Element {
                 <path d="M18.9402 0.356445H3.50738C1.64668 0.356445 0.333252 1.9502 0.333252 3.75645V13.8502C0.333252 15.7627 1.64668 17.3564 3.50738 17.3564H19.1591C20.8009 17.3564 22.3333 15.7627 22.3333 13.9564V3.75645C22.1143 1.9502 20.8009 0.356445 18.9402 0.356445ZM7.99494 12.8939V4.81894L15.3283 8.85645L7.99494 12.8939Z" />
                 </svg>
                 <span className="visually-hidden">YouTube</span>
-            </a>
+            </Link>
             </li>
         </ul>
         </section>
-        <a className="footer-contacts-phone" href="tel:+78128121212">
-        +7 (812) 812-12-12
-        </a>
-        <a className="htmlacademy-link" href="https://htmlacademy.ru/">
-        <svg
-            className="htmlacademy-icon"
-            width={115}
-            height={34}
-            viewBox="0 0 115 34"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" />
-            <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" />
-            <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z" />
-            <path d="M41.1 4.95645C39.5 4.95645 38.2 5.75644 37.6 7.05645H37.5C36.9 5.85645 35.7 4.95645 34.1 4.95645C32.7 4.95645 31.6 5.75645 31 6.75645H30.9V5.15645H29V15.7564H31V10.3564C31 8.35645 32 6.85645 33.6 6.85645C35.1 6.85645 36 7.85645 36 9.45645V15.7564H38V10.1564C38 7.75645 39.4 6.85645 40.6 6.85645C42.1 6.85645 43 7.85645 43 9.45645V15.7564H45V9.25644C45.1 6.75644 43.6 4.95645 41.1 4.95645Z" />
-            <path d="M47.8 13.0564C47.8 14.7564 48.8 15.7564 50.6 15.7564H52.6V13.7564H50.9C50.2 13.7564 49.8 13.3564 49.8 12.6564V0.356445H47.8V13.0564Z" />
-            <path d="M28.9 20.0564C28 18.9564 26.7 18.2564 25 18.2564C21.9 18.2564 19.6 20.5564 19.6 23.8564C19.6 27.1564 21.9 29.4564 25 29.4564C26.8 29.4564 28 28.6564 28.8 27.5564H28.9V29.1564H30.9V18.5564H28.9V20.0564ZM25.3 27.4564C23.1 27.4564 21.7 25.8564 21.7 23.8564C21.7 21.8564 23.1 20.2564 25.3 20.2564C27.5 20.2564 28.9 21.8564 28.9 23.8564C28.9 25.7564 27.5 27.4564 25.3 27.4564Z" />
-            <path d="M44.2 22.3564C43.7 19.9564 41.6 18.2564 38.8 18.2564C35.4 18.2564 33.2 20.7564 33.2 23.8564C33.2 26.9564 35.4 29.4564 38.8 29.4564C41.6 29.4564 43.7 27.6564 44.2 25.2564H42.1C41.7 26.5564 40.4 27.5564 38.8 27.5564C36.6 27.5564 35.2 25.9564 35.2 23.9564C35.2 21.9564 36.6 20.3564 38.8 20.3564C40.4 20.3564 41.6 21.3564 42.1 22.5564H44.2V22.3564Z" />
-            <path d="M55.1 20.0564C54.2 18.9564 52.9 18.2564 51.2 18.2564C48.1 18.2564 45.8 20.5564 45.8 23.8564C45.8 27.1564 48.1 29.4564 51.2 29.4564C53 29.4564 54.2 28.6564 55 27.5564H55.1V29.1564H57.1V18.5564H55.1V20.0564ZM51.5 27.4564C49.3 27.4564 47.9 25.8564 47.9 23.8564C47.9 21.8564 49.3 20.2564 51.5 20.2564C53.7 20.2564 55.1 21.8564 55.1 23.8564C55.1 25.7564 53.6 27.4564 51.5 27.4564Z" />
-            <path d="M68.7 20.1564C67.8 19.0564 66.5 18.2564 64.8 18.2564C61.7 18.2564 59.4 20.5564 59.4 23.8564C59.4 27.1564 61.6 29.4564 64.8 29.4564C66.5 29.4564 67.8 28.6564 68.6 27.6564H68.7V29.1564H70.7V13.7564H68.7V20.1564ZM65.1 27.4564C62.9 27.4564 61.5 25.8564 61.5 23.8564C61.5 21.8564 62.9 20.2564 65.1 20.2564C67.3 20.2564 68.7 21.8564 68.7 23.8564C68.6 25.8564 67.2 27.4564 65.1 27.4564Z" />
-            <path d="M78.3 18.2564C75 18.2564 72.8 20.7564 72.8 23.8564C72.8 26.8564 74.9 29.4564 78.3 29.4564C80.8 29.4564 82.8 28.1564 83.5 25.8564H81.4C80.9 26.8564 79.8 27.4564 78.4 27.4564C76.5 27.4564 75.1 26.1564 75 24.5564H83.8C84 20.9564 81.8 18.2564 78.3 18.2564ZM78.3 20.1564C80 20.1564 81.3 21.1564 81.6 22.7564H75.1C75.4 21.2564 76.6 20.1564 78.3 20.1564Z" />
-            <path d="M98.2 18.2564C96.6 18.2564 95.3 19.0564 94.6 20.2564H94.5C93.9 19.0564 92.7 18.2564 91.1 18.2564C89.7 18.2564 88.6 18.9564 88 20.0564V18.5564H86.1V29.1564H88.1V23.7564C88.1 21.7564 89.1 20.3564 90.7 20.2564C92.2 20.2564 93.1 21.2564 93.1 22.8564V29.1564H95.1V23.5564C95.1 21.1564 96.5 20.2564 97.7 20.2564C99.2 20.2564 100.1 21.2564 100.1 22.8564V29.1564H102.1V22.6564C102.2 20.0564 100.7 18.2564 98.2 18.2564Z" />
-            <path d="M109.4 27.3564L105.8 18.4564H103.6L108.4 30.0564C108.1 30.9564 107.7 31.2564 106.7 31.2564H104.2V33.2564H106.7C108.5 33.2564 109.5 32.4564 110.2 30.6564L114.9 18.4564H112.8L109.4 27.3564Z" />
-        </svg>
-        <span className="visually-hidden">HTML Academy</span>
+        <a className="footer-contacts-phone" href="tel:+78121234567">
+        +7 (812) 123-45-67
         </a>
     </footer>
     </div>);

@@ -19,7 +19,7 @@ function MainModal():JSX.Element {
                 </button>
                 <form
                 className="search-form"
-                action="https://echo.htmlacademy.ru/"
+                action="#"
                 method="post"
                 >
                 <p className="field-group">
