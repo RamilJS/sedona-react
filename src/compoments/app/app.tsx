@@ -1,5 +1,6 @@
 
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import ScrollToTop from '../../utils/scroll-to-top';
 // import browserHistory from '../../browser-history';
 import MainPage from '../../pages/main-page/main-page';
 import Catalog from '../../pages/catalog/catalog';
@@ -10,6 +11,7 @@ function App(): JSX.Element {
 
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
           <Route
             path="/"
